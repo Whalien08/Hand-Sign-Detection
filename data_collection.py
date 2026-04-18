@@ -9,7 +9,7 @@ det=HandDetector(maxHands=1)
 offset=20
 imgSize=300
 
-folder="Data/C"
+folder="Data/A"
 counter=0
 
 while True:

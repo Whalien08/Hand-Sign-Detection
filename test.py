@@ -9,18 +9,18 @@ import tensorflow
 cap=cv2.VideoCapture(0)
 det=HandDetector(maxHands=1)
 
-classifier= Classifier("Model/keras_model.h5","Model/labels.txt")
+classifier= Classifier("model/my_asl_model.h5","model/labels.txt")
 offset=20
 imgSize=300
 
 folder="Data/C"
 counter=0
 
-labels = ["A","B","C"]
+labels = labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "del", "nothing", "space"]
 
 while True:
     success, img = cap.read()
-    img = cv2.flip(img, 1)
+    #img = cv2.flip(img, 1)
     if not success: break
     
     imgOutput = img.copy()
